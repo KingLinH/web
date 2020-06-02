@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="container">
+			<ul class="list">
+				<li class="item">
+					<p>1</p>
+				</li>
+				<li class="item">
+					<p>2</p>
+				</li>
+				<li class="item">
+					<p class="vip">3</p>
+				</li>
+				<li class="item">
+					<p>4</p>
+				</li>
+				<li class="item">
+					<p>6</p>
+				</li>
+			</ul>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="vendor/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		var li2 = $('li:eq(1)');
+		li2.children().css('background','red');                 //children()获取li下的所有子元素
+		li2.parent().css("color",'black');                      //parent()获取li上一级父元素
+		li2.parents('div#container').append('<h2>xin<h2>');     //parents()获取所有父元素，可以选择
+		
+		$('#container').find('p.vip').css({                     //find()指定选择元素
+			background:'black',
+			color:'white'
+		});
+		
+		li2.next().css({fontSize:'25px'});                      //next()下一个节点
+		li2.prev().css({fontSize:'40px'});                      //prev()上一个节点
+	
+		li2.siblings().css('fontWeight','bold');                //siblings()所有兄弟节点
+		
+	</script>
+	
+</html>

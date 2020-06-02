@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+		<script src="vendor/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			/* $('li').on('mouseover',function(){
+				$(this).css('background','red');
+			}).on('mouseout',function(){
+				$(this).css({background:'green'});
+			})                                       //事件绑定（只是链式操作） */
+			
+			/* //off：两个参数        (用于事件解绑)
+			//1.事件名称2.回调函数
+			
+			$('li:eq(3)').off('mouseover');    //只绑定事件会解绑所有回调函数 */
+			
+			
+			//$('<li>new</li>').appendTo('ul');   //不会绑定事件，需要事件代理
+			
+			
+			
+			//事件代理
+			$('ul').on('mouseover','li',function(){
+				$(this).css('background','red');
+			}).on('mouseout','li',function(){
+				$(this).css('background','green');
+			})
+			$('<li>new</li>').appendTo('ul');
+			
+		</script>
+	</body>
+</html>

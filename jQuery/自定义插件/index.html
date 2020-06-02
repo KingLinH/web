@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<script src="../vendor/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			//【注】1.jquery的插件定义在jQuery.fn的基础上
+			//2.命名冲突的解决
+			//3.循环jQuery对象中的每一个元素
+			//4.在函数中返回jQuery（this）
+			
+			
+			(function($){                 //即时调用函数(形参$)(实参jQuery)解决命名冲突
+				$.fn.extend({             //用于功能扩展
+					randomColcr:function(){
+						//this指向通过$选择器选取的所有元素组成的伪数组
+						function random(){
+							var r = Math.floor(Math.random() * 256);
+							var g = Math.floor(Math.random() * 256);
+							var b = Math.floor(Math.random() * 256);
+							return 'rgb('+ r +','+ g +','+ b +')';    //因为返回的是字符串，要转换为数字
+						}
+						this.each(function(index){       //each()循环每一个元素       function(索引)
+							$(this).css({
+								background:random()
+							})
+						})
+						return this;           //在函数中返回jQuery（this）
+					}
+				})
+			})(jQuery);
+			
+			$('div').randomColcr();
+			
+		</script>
+	</body>
+</html>

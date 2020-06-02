@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script src="vendor/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			
+			$.ajax({
+				type:'get',
+				url:'person.json',
+				data:{
+					name:'李白'
+				},
+				success:function(resp){
+					alert(resp.hobby);
+				},
+				error:function(){
+					
+				}
+			})
+			
+			
+			
+			
+			/* $.ajax({
+				type:'get',
+				url:'person.json',
+			}).done(function(){     //发送成功
+				
+			}).fail(function(){     //发送失败
+				
+			}) */
+			
+			$.ajax({type:'get',url:'./api1'}).done(function(){
+				return $ajax({url:'./api2'})
+			}).done(function(){
+				return $ajax({url:'./api3'})
+			}).done(function(){
+				console.log('调用结束')                         //解决回调地狱的方法
+			})
+			
+			
+		</script>
+	</body>
+</html>

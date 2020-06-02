@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<botton>删除</botton>
+		<script src="vendor/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			
+			var $el = $('<div><h1>new<h1><div>');     //添加节点到末尾
+			//$('body').append($el);                  //append()
+			$el.appendTo('body');                     //appendTo()
+			
+			
+			var newlist = $('<li>0</li>');            //添加节点到首位
+			//$('ul').prepend(newlist);               //prepend()
+			newlist.prependTo('ul');                  //prependTo()
+			
+			
+			$('li:eq(3)').after('<li>3.5</li>');            //after()在后面添加节点
+			$('<li>4.5</li>').insertAfter('li:eq(5)');      //insertAfter()在后面添加节点
+			
+			
+            $('botton').on('click',function(){
+				//$('li:last').remove();                   //remove()删除节点
+				$('li:last').empty();                      //empty()仅删除节点里的内容
+			})
+			
+		</script>
+	</body>
+</html>

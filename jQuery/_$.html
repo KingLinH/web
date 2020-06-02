@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+			}
+			.play{
+				background-color: green;
+			}
+			.pause{
+				background-color: aqua;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="pause"></div>
+		<!-- <ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<input type="text" />
+		<label>选中<input type="checkbox" checked></label> -->
+		
+		<script src="vendor/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			
+			//$("li").html("li");
+			//alert($('ul').html());
+			
+			/* $('input').keyup(function(){
+				var v = $(this).val();
+				if(v.slice(-2) !== 'px'){
+					$(this).val(v + 'px');
+				}
+			})
+			
+			$('input[type=checkbox]').change(function(){
+				console.log($(this).prop('checked'));
+			}) */
+			
+			$('div').click(function(){
+				$(this).toggleClass('pause');    //toggleClass(类名) 若类名存在则删除，否则添加
+				$(this).toggleClass('play');
+			})
+			
+		</script>
+		
+	</body>
+</html>
