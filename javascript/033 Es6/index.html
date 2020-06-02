@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="u"></ul>
+		<script type="text/javascript">
+			
+			//let 类似var，有块作用域   const 定义常量
+			
+			
+			
+			//--------解构赋值---------
+			
+			
+			
+			
+			/* let[a,b] = [1,2];
+			console.log(a,b); */
+			
+			/* let{a,b} = {a:"111",b:"222"};
+			console.log(a,b); */
+			
+			/* let{a:b} = {a:111};
+			console.log(b); */
+			
+		
+			
+			
+			//-------模版字符串-------  用`${---}`包起来
+			
+		
+			
+			//Es5
+			/* var obj = {"name":"lily","age":18};
+			var name = obj.name;
+			var age = obj.age;
+			console.log(name + "的年龄是" + age); */
+			//Es6
+			/* let obj = {"name":"lily","age":18};
+			let{name,age} = obj;
+			console.log(`${name}` + "的年龄是" + `${age}`); */
+			
+			
+		
+			
+			//------模版字符串-----  用`${---}`包起来
+			
+			
+			
+			
+			/* var arr = [1,2,3,4];
+			var oUl = document.getElementById("u");
+			var a = "";
+			
+			/* for(var i in arr){
+				a += "<li>"+arr[i]+"</li>";
+			} */
+			
+			/* for(var i in arr){
+				a += `<li>
+					<a href="">${arr[i]}</a>
+				</li>`
+			}
+			
+			oUl.innerHTML = a; */
+			
+			
+			
+			
+			//-------箭头函数-------
+			
+			
+			
+			
+			//Es5
+			/* var foo = function(){
+				return 1;
+			}
+			console.log(foo());*/
+			//Es6
+			/* let foo = () => 1;    //单条语句
+			console.log(foo()); */
+			
+			/* let foo = (a) =>{       //多条语句
+				let b = 10;
+				return a + b;
+			}
+			console.log(foo(10)); */
+			
+			
+			//箭头函数中的this指向定义时所在的作用域，而不是执行时所在的作用域
+			
+			/* var name = "window";
+			var obj = {"name":"lily",
+					"seyhello":function(){
+						setTimeout(() => {
+							console.log(this.name)
+						},1000);
+					}
+			}
+			obj.seyhello(); */
+			
+			
+			
+			
+			//--------Set结构--------
+			
+			
+			
+			/* var set = new Set([,2,,3,2,5,4]);
+			console.log(set);   //返回的是(类数组)集合
+			//扩展运算符
+			var arr = [...set];   //转换为数组
+			console.log(arr); */
+			
+			//Set的遍历
+			/* 
+				for(let i of set){
+					console.log(i);
+				}
+				for(let i of arr){
+					console.log(i);
+				}
+			 */
+			
+			/* 
+				set.has();   //判断是否存在某元素
+				set.add();   //添加元素
+				set.delet(); //删除元素
+				set.clear(); //清空 
+			*/
+			
+			
+			/* 
+				set.keys() 返回键名  for(let item of set.key()) {console.log(item);}
+				set.values() 返回键值
+				set.entries() 返回键值对
+				set.fotEach() 使用回调函数遍历每个成员 set.forEach((value,key))=>console.log(value * 2)
+			 */
+			//var set = new Set([2,3,2,5,4]);
+			/* 
+				for(let item of set.keys()){
+					console.log(item);
+				}                                      //keys values返回结果一致都是2 3 5 4
+				for(let item of set.values()){
+					console.log(item);
+				} 
+			*/
+			/* 
+				for(let [key,item] of set.entries()){
+					console.log([key,item]);
+				} 
+			*/
+			//set.forEach((item,key)=>console.log(item,key));
+			
+			
+			
+			//---------map结构---------
+			
+			
+			/* var map = new Map([["name","lily"],["age",15]]);
+			console.log(map);
+			map.set("sexy","male");
+			console.log(map); */
+		
+			//其他方法同set
+			
+			
+			
+			//----------生成器函数---------
+			
+			
+			/* 
+				function* foo(x){
+					yield x+1;
+					yield x+2;
+					return x+3;
+				}
+				var f = foo(1);
+				console.log(f);
+				//console.log(f.next());
+				//console.log(f.next(),f.next());
+				console.log(f.next(),f.next(),f.next());
+			 */
+			
+			//next()参数表示上一次的返回值
+			/* 
+				function* foo(x){                  //x=5
+					var y = 2 * (yield(x + 1));    //y=2*12
+					var z = yield(y / 3);          //z=13
+					return(x + y + z);             //5+24+13=42
+				}
+				var it = foo(5);           
+				console.log(it.next());      //第一次没有返回值 所以是5+1=6
+				console.log(it.next(12));    //2*12/3=8
+				console.log(it.next(13));    //5+24+13=42
+			 */
+			
+			//斐波那契数列
+			
+			/* 
+				function* feiBo(n){
+					let a = 0;
+					let b = 1;
+					for(let i = 0;i < n;i++){
+						yield a;
+						let temp = a + b;
+						a = b;
+						b = temp;
+					}
+				}
+				var f = feiBo(10);
+				
+				for(let i of f){
+					console.log(i);
+				}
+			*/
+			
+		</script>
+		
+	</body>
+</html>

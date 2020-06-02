@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			/*
+				严格模式："use strict" 使用在哪哪里就生效，尽量不要用在全局中
+			*/
+		   
+		   
+		   /*
+				indexOf()  数组
+				【格式】数组.indexOf(元素，开始查找的位置)
+				【注】使用的方式和字符串的方式一致
+		   */
+		  
+		  
+		   /*
+				forEach()
+				【格式】数组.forEach(function(item, index, array){
+					item  当前遍历到的元素
+					index 当前遍历到的下标
+					array 当前数组
+				})
+				功能：遍历数组
+		   */
+				/* var arr = [10,20,30];
+				arr.forEach(function(item,index,array){
+					alert(item +',' + index +',' + array);
+				}) */
+				//arr.forEach(alert);
+		  
+
+		   /*
+				map  映射  遍历->操作->返回
+		   */
+			/* var arr = [20,30,40,50];
+			var newArr = arr.map(function(item,index,arrat){
+				return item + 2;
+			})
+			alert(newArr);   //22,32,42,52 */
+			
+			
+		   /*
+				reduce   归并
+		   */
+			/* var arr = [10,20,30,40];
+			var res = arr.reduce(function(pre,next,index,array){
+				
+					//pre   上一次遍历return后面的值
+					//next  当前遍历到的元素 
+				
+				alert(pre +','+ next);
+				return pre + next;
+			})
+			alert(res);   //100 */
+		  
+		  
+		   /*
+				filter  过滤
+		   */
+			/* var res = [10,20,30,40,50,60].filter(function(item,index,array){
+				return item > 30;
+			})
+			alert(res);  //40,50,60(返回一个新的数组)  */
+			
+			
+		   /*
+				some 
+				判断return后面的条件是否成立，成立返回true，否则返回false
+				【注】匹配成功就返回，后面不再继续
+		   */
+			/* var arr = [10,20,30,40,50];
+			var res = arr.some(function(item,index,array){
+				return item == 30;   //判断数组中是否存在30
+			})
+			alert(res); */
+			
+			
+		   /*
+				every  跟some一样，但要求全部一样才返回true，否则false
+				【注】当返回false直接终止循环
+		   */
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+				arr.push()		向数组末尾插入元素,可以是任意多个,返回值为插入元素后的数组长度
+				arr.pop()		从数组末尾取出一个元素,返回值为取出的元素
+				arr.shift()		从数组开头取出一个元素,返回值为取出的元素
+				arr.unshift()		向数组开头插入元素,可以是任意多个,返回值为插入元素后的数组长度
+			*/
+		   
+		   /*
+				concat()
+				【格式】数组1.concat（数组2）
+				功能：将两个数组合并为一个新的数组，源数组不会改变
+			*/
+		   
+		   /*
+				slice()
+				【格式】数组.slice(start,end)
+				功能：基于当前数组获取指定区域元素并创建一个新数组，源数组不改变
+				取头不取尾
+		   */
+		  
+		  /*
+				splice 可以完成删除、插入、替换
+				参数：参数1 截取开始的下标
+					  参数2 截取的长度
+					  参数3 在截取开始的下标位置，要插入的元素，元素个数随意
+				【注】会修改源数组
+		  */
+		 
+		 /*
+				join()
+				【格式】数组.join(拼接符)
+				功能：使用拼接符将数组中的元素拼接成字符串
+		 */
+		
+			//输出一个5*5二维数组
+			/*
+				var count = 0;
+				var arr = [];
+				for (var i = 0;i < 5;i++){
+					var newarr = []
+					for(var j = 0;j < 5;j++){
+						newarr.push(++count);
+					}
+					arr.push(newarr);
+				}
+				alert(arr); 
+			*/
+			
+			/*
+				系统提供的数组排序方法
+				
+				reverse()  逆向排序（首尾颠倒）
+				【格式】数组.reverse();
+				
+				sort()
+				【格式】数组.sort()
+				功能：将数组元素从小到大排序
+				【注】sort默认是按照字符串进行排序
+				例：
+					var arr=[10,1,15,5]; 
+					arr.sort(); 
+					alert(arr) 
+					结果为：1,10,15,5
+					因为首位5>1
+			*/
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

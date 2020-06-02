@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			/*
+				setInterval()
+				【格式】
+				setInterval(函数/匿名函数，毫秒数)
+				
+				setInterval(function(){
+					//代码
+				}, 毫秒数);
+				功能：每隔指定毫秒数调用一次函数
+				返回值：点前页面上对于这个定时器的唯一标识，定时器的ID
+				
+				
+				clearInterval()取消定时器
+				参数：定时器的ID
+			*/
+			
+			var i = 0;
+			/* function show(){
+				document.write(i++ + "<br />");
+			} */
+			var show = function(){
+				document.write(i++ + "<br />");
+			}
+			
+			window.onload = function(){
+				var oBtn = document.getElementById("btn");
+				oBtn.onclick = function(){
+					var timer = setInterval(function(){
+						document.write(i++ + "<br />");
+						if(i == 5){
+							clearInterval(timer);
+						}
+			},1000);
+				}
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="botton"/>
+	</body>
+</html>

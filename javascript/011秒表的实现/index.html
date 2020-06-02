@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			#box{
+				width: 250px;height: 400px;border: 1px solid black;
+				margin: 200px auto;
+			}
+			#screen{
+				display: flex;justify-content: center;align-items: center;
+				margin-top: 30px;font-size: 30px;height: 100px;
+			}
+			span{
+				width: 40px;text-align: center;
+			}
+			#btn{
+				height: 200px;display: flex;flex-wrap: wrap;justify-content: center;
+				align-items: center;margin-top: 40px;
+			}
+			input{
+				width: 150px;height: 50px;font-size: 30px;background-color: black;
+				color: white;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			function $(id){
+				return document.getElementById(id);
+			}
+				
+			window.onload = function(){
+				/* var oMin = document.getElementById("min");
+				var oSec = document.getElementById("sec");
+				var oHaoMiao = document.getElementById("haomiao");
+				var oBtn1 = document.getElementById("btn1");
+				var oBtn2 = document.getElementById("btn2");
+				var oBtn3 = document.getElementById("btn3"); */
+				
+				var timer = null;
+				
+				$("btn1").onclick = function(){
+					timer = setInterval(function(){
+						$("haomiao").innerHTML ++;
+						$("haomiao").innerHTML = num($("haomiao").innerHTML);
+						if($("haomiao").innerHTML == 100){
+							$("sec").innerHTML ++;
+							$("sec").innerHTML = num($("sec").innerHTML);
+							$("haomiao").innerHTML = 0;
+							if($("sec").innerHTML == 60){
+								$("min").innerHTML ++;
+								$("min").innerHTML = num($("min").innerHTML);
+								$("sec").innerHTML = 0;
+							}
+						}
+					},10);
+					}
+				$("btn2").onclick = function(){
+					clearInterval(timer);
+					}
+					
+				$("btn3").onclick = function(){
+					clearInterval(timer);
+					$("haomiao").innerHTML = "00";
+					$("sec").innerHTML = "00";
+					$("min").innerHTML = "00";
+				}
+			}
+			function num(num){
+				if(num < 10){
+					num = "0" + num;
+				}
+				else{
+					num = num;
+				}
+				return num;
+			}				
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="screen">
+				<span id="min">00</span>:
+				<span id="sec">00</span>:
+				<span id="haomiao">00</span>
+			</div>
+			<div id="btn">
+				<input type="button" id="btn1" value="开始"/>
+				<input type="button" id="btn2" value="暂停"/>
+				<input type="button" id="btn3" value="停止"/>
+			</div>
+		</div>
+	</body>
+</html>

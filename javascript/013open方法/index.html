@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+				window.open()
+				open()
+				
+				opener  打开当前窗口的父窗口的window对象
+				opener.命令
+				
+				三个参数：
+				1.要加载的URl
+				2.窗口的名称或者窗口的目标
+				3.一串具有特殊意义的字符串
+			 */
+			window.onload = function(){
+				var oBtn = document.getElementById("btn");
+				oBtn.onclick = function(){
+					//open("http://www.baidu.com");
+					//只有一个参数时，调用open方法会打开新的窗口，加载URl
+					
+					//open("http://www.baidu.com","baidu");
+					//第二个参数等于新窗口的名字，再次调用open会重新加载以后名字的窗口
+					
+					open("http://www.baidu.com","baidu","width=400,height=400,left=200,top=200");
+					//在指定位置打开指定大小的窗口
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="按钮"/>
+	</body>
+</html>

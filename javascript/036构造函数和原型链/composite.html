@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			//--------------构造函数和原型链的混合使用---------------
+			
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+			}
+			Person.prototype.sayHello = function(){
+				alert(this.name);
+			}
+			
+			function Student(name,age,id){
+				Person.apply(this,[name,age]);
+				this.id = id;
+			}
+			Student.prototype = Object.create(Person.prototype);
+			Student.prototype.study = function(){
+				alert(this.id + "is learning");
+			}
+			
+			
+			//通常属性放在构造函数中，方法放在原型链中
+			
+			
+		</script>
+		
+		
+	</body>
+</html>
