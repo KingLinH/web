@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="singleton.js"></script>
+		<script type="text/javascript">
+			
+			var s1 = new Singleton();
+			var s2 = new Singleton();
+			alert(s1 === s2);
+			var s3 = Singleton();
+			alert(s1 === s3);
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<botton>f</botton>
+		<botton>d</botton>
+		<script src="massage.js"></script>
+		<script src="hero.js"></script>
+		<script type="text/javascript">
+			var msg = new Massage();
+			var lb = new Hero('李白',msg);
+			var kd = new Hero('凯爹',msg);
+			var ml = new Hero('木兰',msg);
+			msg.attach(lb);
+			msg.attach(kd);
+			msg.attach(ml);
+			document.querySelector('botton:first-of-type').onclick = function(){
+				msg.setState('fffff');
+			}
+			document.querySelector('botton:last-of-type').onclick = function(){
+				msg.setState('dddddd');
+			}
+		</script>
+	</body>
+</html>

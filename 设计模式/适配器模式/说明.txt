@@ -1,0 +1,17 @@
+文件1
+function x1(){
+	
+}
+x1.x1方法 = function(){
+	.......
+}
+
+
+
+文件2
+function x2)(){
+	this.x = new x1();
+}
+x2.x2方法 = function(){
+	this.x.x1方法
+}
