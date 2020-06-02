@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;padding: 0;
+			}
+			#header{
+				height: 50px;
+				background-color: #E83828;
+			}
+			#header .head{
+				width: 1005px;height: 50px;
+				background-color: #DDDDDD;
+				margin: auto;
+			}
+			#banner{
+				height: 500px;
+				background-color: blueviolet;
+			}
+			#category{
+				width: 1005px;height: 200px;
+				margin: auto;background-color: #008000;
+			}
+			#category .item{
+				width: 125px;height: 165px;
+				padding-left: 25px;
+				padding-right: 25px;
+				padding-bottom: 25px;
+				padding-top: 10px;
+				border-right: 1px dashed black;
+				float: left;
+			}
+			#category .item.first{
+				padding-left: 0;
+			}
+			#category .item.last{
+				border-right: 0;
+				padding-right: 0;
+			}
+			#case{
+				background-color: #DDDDDD;
+			}
+			#case .title-text{
+				width: 1005px;
+				margin: auto;
+				padding-top: 20px;
+				padding-bottom: 10px;
+				font-size: 45px;
+			}
+			#case .item-wrapper{
+				width: 1000px;
+				margin: auto;
+				overflow: auto;
+			}
+			#case .item-wrapper .item{
+				width: 320px;
+				height: 330px;
+				background-color: bisque;
+				float: left;
+			}
+			#case .item-wrapper .item.second{
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			#case p{
+				width: 1005px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 15px;
+				height: 40px;line-height: 40px;
+				text-align: center;
+				font-size: 30px;
+				color: dimgray;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<div class="head"></div>
+		</div>
+		<div id="banner"></div>
+		<div id="category">
+			<div class="item first"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item last"></div>
+		</div>
+		<div id="case">
+			<div class="title-text">
+				case
+			</div>
+			<div class="item-wrapper">
+				<div class="item"></div>
+				<div class="item second"></div>
+				<div class="item"></div>
+			</div>
+			<p>
+				查看更多+
+			</p>
+		</div>
+	</body>
+</html>
