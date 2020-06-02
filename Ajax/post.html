@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			//1.创建一个xhr对象
+			var xhr = new XMLHttpRequest();
+			
+			//5.监听数据返回
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState !== 4){
+					return;
+				}
+				
+				if(xhr.status >= 200 && xhr.status <= 300){
+					var resp = JSON.parse(xhr.responseText);
+					if(resp.result){
+						alert("登陆成功");
+					}
+					else{
+						alert("登录失败");
+					}
+				}
+				else{
+					console.error("请求失败");
+				}
+			}
+			
+			//2.配置这个对象
+			xhr.open("POST","服务器...",true)     //第二个为URL地址
+			
+			//3.设定请求头,指明body中的数据是什么格式
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			
+			//4.发送数据
+			xhr.send("要发送的内容");
+			
+		</script>
+		
+	</body>
+</html>
