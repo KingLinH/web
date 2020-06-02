@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>007CSS垂直手风琴</title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			.listbox{
+				width: 500px;margin: 100px auto;
+			}
+			.listbox .list a{
+				display: block;height: 35px;background:linear-gradient(#cecece,#8f8f8f);
+				border-radius: 5px; padding-left: 12px;text-decoration: none;
+				color: #424242;line-height: 35px;
+			}
+			.listbox .list p{
+				height: 0;overflow: auto; padding-left: 10px;margin: 5px 0;
+				transition: 0.5s linear;
+			}
+			.listbox .list{
+				position: relative;
+			}
+			.listbox .list span{
+				width: 0;height: 0;border-top: 5px white solid;
+				border-right: 5px solid transparent;border-bottom: 5px solid transparent;
+				border-left: 5px solid transparent;position: absolute;
+				top: 15px;right: 15px;/*用边框写三角形*/
+			}
+			.listbox .list:target p{height: 100px;}
+			.listbox .list:target a,.listbox .list a:hover{
+				background:linear-gradient(#6bb2ff,#2288dd);color: #fff;
+			}
+			.listbox .list:target span{
+				border-top: 5px solid transparent;border-left: 5px solid white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="listbox">
+			<div class="list" id="listone">
+				<a href="#listone">ONE</a>
+				<span></span>
+				<p>Failure no longer will be my payment for struggle. Just as 
+				nature made no provision for my body to tolerate pain neither 
+				has it made any provision for my life to suffer failure. 
+				Failure, like pain, is alien to my life. In the past I 
+				accepted it as I accepted pain. Now I reject it and I am 
+				prepared for wisdom and principles which will guide me out 
+				of the shadows into the sunlight of wealth, position, and 
+				happiness far beyond my most extravagant dreams until even 
+				the golden apples in the Garden of Hesperides will seem no 
+				more than my just reward.
+				</p>
+			</div>
+			<div class="list" id="listtwo">
+				<a href="#listtwo">TWO</a>
+				<span></span>
+				<p>Failure no longer will be my payment for struggle. Just as 
+				nature made no provision for my body to tolerate pain neither 
+				has it made any provision for my life to suffer failure. 
+				Failure, like pain, is alien to my life. In the past I 
+				accepted it as I accepted pain. Now I reject it and I am 
+				prepared for wisdom and principles which will guide me out 
+				of the shadows into the sunlight of wealth, position, and 
+				happiness far beyond my most extravagant dreams until even 
+				the golden apples in the Garden of Hesperides will seem no 
+				more than my just reward.
+				</p>
+			</div>
+			<div class="list" id="listthree">
+				<a href="#listthree">THREE</a>
+				<span></span>
+				<p>Failure no longer will be my payment for struggle. Just as 
+				nature made no provision for my body to tolerate pain neither 
+				has it made any provision for my life to suffer failure. 
+				Failure, like pain, is alien to my life. In the past I 
+				accepted it as I accepted pain. Now I reject it and I am 
+				prepared for wisdom and principles which will guide me out 
+				of the shadows into the sunlight of wealth, position, and 
+				happiness far beyond my most extravagant dreams until even 
+				the golden apples in the Garden of Hesperides will seem no 
+				more than my just reward.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

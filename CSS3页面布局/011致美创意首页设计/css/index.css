@@ -1,0 +1,41 @@
+*{
+	margin: 0;padding: 0;
+}
+li{list-style: none;}
+a{text-decoration: none;}
+img{border: none;}
+
+/* top */
+#top{height: 52px;background-image: url(../img/top.png);text-align: right;}
+#top p{width: 950px;margin: 0 auto;line-height: 52px;font-size: 18px;color: #333;}
+#top p img{vertical-align: top;padding-top: 6.5px; margin: 0 5px;}
+
+/* nav */
+#nav{width: 950px;height: 100px;margin: 0 auto;}
+#nav .logo{float: left;padding-top: 30px;padding-right: 90px;}
+#nav .nav{display: flex;justify-content: center;float: right;margin-top: 25px;
+height: 50px;align-items: center;}
+#nav .nav a{width: 90px;text-align: center;font-size: 12px;color: #bebfbe;
+padding: 15px 0;border-bottom: rgba(0,0,0,0) 2px solid;}
+#nav .nav a:hover{border-bottom-color: black;color: #000000;}
+#nav .nav span{color: #bebfbe;}
+
+/* banner */
+#banner img{width: 100%;display: block;}
+
+/* link */
+#link{width: 950px;height: 220px;margin: 0 auto;}
+#link ul li{float: left;margin: 40px 25px;}
+
+/* case */
+#case{width: 950px;height: 445px;background-color: antiquewhite;margin: 0 auto;}
+
+/* about */
+#about{width: 950px;height: 250px;background-color: aqua;margin: 0 auto;}
+
+/* process */
+#process{width: 950px;height: 245px;background-color: beige;margin: 0 auto;}
+
+/* bottom */
+#bottom{height: 120px;background-color: aquamarine;border-top: 1px solid #b4b4b4;}
+
