@@ -1,0 +1,11 @@
+@charset "UTF-8";
+div {
+  font-size: 20px; }
+
+.box {
+  width: 200px;
+  height: 200px; }
+  .box .pic {
+    width: 100px;
+    height: 100px;
+    /* .box下的.pic可以直接写在.box中*/ }

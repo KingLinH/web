@@ -1,0 +1,20 @@
+@mixin font($family,$size,$weight) {
+	font-family: $family;
+	font-size: $size;
+	font-weight: $weight;
+}
+
+a{
+	@include font('宋体',30px,bold);
+}
+
+@mixin transition($prop,$time) {
+	-webkit-transition: $prop $time;
+	-moz-transition: $prop $time;
+	-ms-transition: $prop $time;
+	-o-transition: $prop $time;
+	transition: $prop $time;
+}
+div{
+	@include transition(left,2s);
+}

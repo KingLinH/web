@@ -1,0 +1,12 @@
+@charset "UTF-8";
+a {
+  font-family: "宋体";
+  font-size: 30px;
+  font-weight: bold; }
+
+div {
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -ms-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s; }

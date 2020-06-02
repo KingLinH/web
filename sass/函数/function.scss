@@ -1,0 +1,11 @@
+$count: 10;
+$deW: 640px;
+
+@function px2rem($px){
+	@return $px * $count / $deW * 1rem;
+}
+
+div{
+	width: px2rem(100px);
+	height: px2rem(100px);
+}

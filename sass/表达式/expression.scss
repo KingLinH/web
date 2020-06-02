@@ -1,0 +1,27 @@
+@for $i from 1 through 72{
+	.box div:nth-of-type(#{$i}){                  //引用变量必须要#{ }
+		-webkit-transition: rotateY($i * 30deg);
+		-moz-transition: rotateY($i * 30deg);
+		-ms-transition: rotateY($i * 30deg);
+		-o-transition: rotateY($i * 30deg);
+		transition: rotateY($i * 30deg);
+	}
+}
+
+
+
+
+$someEvent: false;           //不同事件不同样式
+
+@if $someEvent{
+	p{
+		color: #ccc;
+		background-color: black;
+	}
+}
+@else{
+	P{
+		background-color: red;
+		color: black;
+	}
+}

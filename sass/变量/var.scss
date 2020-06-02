@@ -1,0 +1,14 @@
+$fontSize:20px;
+
+div{
+	font-size: $fontSize;
+}
+
+.box{
+	width: 200px;
+	height: 200px;
+	.pic{
+		width: 100px;
+		height: 100px;         /* .box下的.pic可以直接写在.box中*/
+	}
+}
